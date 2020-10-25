@@ -1,0 +1,29 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Filter</title>
+</head>
+
+	<body>
+    <div id="grid-item1"><a href="/">Main Board</a></div>
+	<div id ="grid-item1">
+        <h1>Filter tournaments by date</h1>
+<form method="post">
+    {% csrf_token %}
+<p><label for "od">From:</label>
+{{form.date_from}}&nbsp &nbsp
+<label for "do">To:</label>
+{{form.date_to}}<br><br><br>
+<button type="submit"> Filter </button>
+</p>
+        </form>
+    </div>
+</body>
+
+</html>

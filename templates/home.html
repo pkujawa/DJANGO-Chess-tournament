@@ -1,0 +1,49 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Rest Django Chess</title>
+</head>
+
+<body>
+            <div class="grid-container">
+                    {% if user.is_authenticated %}
+                        <div id ="grid-item2"></div>
+                        <div id="grid-item1"><a href="/api">Main Page</a></div>
+                        <div id ="grid-item2"></div>
+                        <div id="grid-item1"><a href="/accounts/logout/">Logout</a></div>
+                    {% else %}
+                        <div id ="grid-item2"></div>
+                        <div id="grid-item1"><a href="/accounts/login/">Log in</a></div>
+                        <div id ="grid-item2"></div>
+                        <div id="grid-item1"><a href="/accounts/register">Sign Up</a></div>
+                    {% endif %}
+                    <div id="grid-item1"><a href="/api/tournaments/">Tournaments</a></div>
+					<div id ="grid-item2"></div>
+                    <div id="grid-item1"><a href="/api/tournaments/1/">Tournament</a></div>
+					<div id ="grid-item2"></div>
+					<div id ="grid-item2"></div>
+                    <div id="grid-item1"><a href="/api/tournaments/1/games">Game in tournament</a></div>
+					<div id ="grid-item2"></div>
+                    <div id="grid-item1"><a href="/api/players">Players</a></div>
+                    <div id="grid-item1"><a href="/api/game/1">Game</a></div>
+					<div id ="grid-item2"></div>
+                    <div id="grid-item1"><a href="/filter">Filter Tournaments</a></div>
+					<div id ="grid-item2"></div>
+                    {% if user.is_superuser %}
+                        <div id="grid-item1"><a href="/api/addSuperuser">Add Superuser</a></div>
+                        <div id ="grid-item2"></div>
+                        <div id="grid-item1"></div>
+                        <div id ="grid-item2"></div>
+                    {% endif %}
+            </div>
+        {% block content %}
+        {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+body{
+background-image:url('wood.png');
+
+}
+.grid-container {
+  display: grid;
+  grid-gap: 10px 10px;
+  grid-template-columns: auto auto auto auto;
+  padding: 20px;
+  margin: 40px;
+  margin-right: 120px;
+  margin-left: 120px;
+  background-color: #fff8e7;
+  grid-template-rows: 300px 300px 300px 300px;;
+}
+
+#grid-item1 {
+  border: 1px solid black;
+  padding: 110px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: Garamond;
+  text-align: center;
+  background-color: #fff8e7;
+}
+#grid-item2 {
+  border: 1px solid black;
+  background-image: url('wood.png');
+
+}
+
+a{
+    text-decoration: none;
+    color: #030202;
+	cursor: url("cursor.svg"), auto;
+
+}
+
+a:hover
+{
+  text-shadow: 8px 8px 2px #555555;
+
+}
+button {
+  background-color: #fff8e7;
+  width: 200px;
+  height: 50px;
+  border-image:url('wood.png') 30 round;
+  padding: 6px 10px;
+  margin: 4px 2px;
+  cursor: url("cursor.svg"), auto;
+  text-decoration: none;
+    color: #030202;
+	cursor: url("cursor.svg"), auto;
+	  font-weight: bold;
+  font-family: Garamond;
+  font-size: 20px;
+    border-image-width: 5px;
+}
+button:hover {
+	  text-shadow: 8px 8px 2px #555555;
+}
+}
